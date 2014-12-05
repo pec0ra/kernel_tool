@@ -62,8 +62,8 @@ if [ -f elf/zImage ] && [ -f elf/boot.img ]; then
 	# /!\ You will probably have to edit this part depending on the updater script you have /!\
 	#
 	# Replace the lines in updater script with correct version and file names
-	sed -i "4s/v[0-9\.]*/v$version/" $FINAL_PATH/zip_content/META-INF/com/google/android/updater-script;
-	sed -i "11s/\".*\.img\"/\"$kernel_name.img\"/" $FINAL_PATH/zip_content/META-INF/com/google/android/updater-script;
+	sed -i "4s/v[0-9\.]*/v$version/" $FINAL_PATH/zip_content/META-INF/com/google/android/updater-script; # find vXX.X at line 4 and replace with new version number
+	sed -i "11s/\".*\.img\"/\"$kernel_name.img\"/" $FINAL_PATH/zip_content/META-INF/com/google/android/updater-script; # looks for a xxxxx.img at line 11 and replaces it with the new name
 	
 	if [ -f $FINAL_PATH/$kernel_name.zip ]; then
 		rm $FINAL_PATH/$kernel_name.zip
