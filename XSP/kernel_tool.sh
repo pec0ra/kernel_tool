@@ -1,12 +1,12 @@
 # Setting environment
 export EXECDIR=$(cd $(dirname "$0"); pwd)
 export ARCH=arm
-export CROSS_COMPILE=/home/basile/Android/Development/toolchains/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.05/bin/arm-cortex_a15-linux-gnueabihf- #path to your toolchain
+export CROSS_COMPILE=/home/basile/Android/Development/toolchains/arm-cortex_a15-linux-gnueabihf-linaro_4.9.3-2014.11/bin/arm-cortex_a15-linux-gnueabihf- #path to your toolchain
 export KBUILD_BUILD_USER=pec0ra # Name of the user who will appear in kernel information
 export KERNELS_PATH=~/Android/Development/kernels # The path where you have your kernel sources (each different kernel in another subdirectory)
 export PACKING_PATH=~/Android/Development/build_tools/msm8960t_viskan # The path to DooMLoRD's build tool
 export FINALS_PATH=~/Android/Development/final # The path where you will create your zip files (each different kernel in another subdirectory)
-export DEFCONFIG="huashan_defconfig" # The name of your defconfig
+export DEFCONFIG="williams_huashan_defconfig" # The name of your defconfig
 export CORES_NUMBER=4 # Number of thread used to compile
 export MAKE_OPTIONS="CONFIG_NO_ERROR_ON_MISMATCH=y" # Add here any additional option for compilation
 
